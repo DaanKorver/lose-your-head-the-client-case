@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'Austral Sans Stamp Reg';
+	src: url('/fonts/AustralSansStamp-Regular.eot');
+	src: url('/fonts/AustralSansStamp-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/AustralSansStamp-Regular.woff2') format('woff2'),
+		url('/fonts/AustralSansStamp-Regular.woff') format('woff'),
+		url('/fonts/AustralSansStamp-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Austral Sans Stamp Thi';
+	src: url('/fonts/AustralSansStamp-Thin.eot');
+	src: url('/fonts/AustralSansStamp-Thin.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/AustralSansStamp-Thin.woff2') format('woff2'),
+		url('/fonts/AustralSansStamp-Thin.woff') format('woff'),
+		url('/fonts/AustralSansStamp-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
