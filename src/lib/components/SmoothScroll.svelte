@@ -21,7 +21,7 @@
 
 	// Info
 	// lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }: LenisScroll) => {
-	// 	console.log({ scroll, limit, velocity, direction, progress });
+	// 	({ scroll, limit, velocity, direction, progress });
 	// });
 
 	function raf(time: number) {

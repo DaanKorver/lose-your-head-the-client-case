@@ -23,4 +23,4 @@
 	const pass = new ShaderPass(myEffect);
 </script>
 
-<Pass pass={new FilmPass(0.2, 0, 0, 0.5)} />
+<Pass pass={new FilmPass(0, 0, 0, 0)} />

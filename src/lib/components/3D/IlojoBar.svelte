@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Canvas } from '@threlte/core';
+	import { Canvas, useThrelte } from '@threlte/core';
 	import Scene from './Scene.svelte';
 	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
@@ -18,8 +18,6 @@
 		size={{ width: innerWidth, height: innerHeight }}
 		dpr={window.devicePixelRatio}
 		rendererParameters={{ antialias: true }}
-		flat={true}
-		linear
 	>
 		<Scene />
 	</Canvas>
@@ -32,6 +30,6 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		z-index: 2;
+		z-index: -1;
 	}
 </style>

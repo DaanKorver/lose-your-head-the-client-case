@@ -16,7 +16,7 @@
 					scrub: true,
 					pin: document.querySelector('main'),
 					start: 'top top',
-					end: '+=300%'
+					end: '+=500%'
 				}
 			})
 			.to(
@@ -24,20 +24,24 @@
 				{
 					z: 8,
 					y: 1,
-					ease: 'ease-out'
+					ease: 'none',
+					duration: 1
 				},
 				'scene1'
 			)
 			.to(
 				$camera.rotation,
 				{
-					x: 0
+					x: 0,
+					duration: 1
 				},
 				'scene1'
 			)
 			.to($camera.position, {
 				z: 1,
-				ease: 'none'
+				y: 0.75,
+				ease: 'none',
+				duration: 2
 			});
 	});
 </script>
@@ -45,7 +49,7 @@
 {#if $isDebug}
 	<AxesHelper />
 	<PerspectiveCamera fov={70} position={{ z: -5 }}>
-		<OrbitControls enableDamping minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} />
+		<OrbitControls enableDamping />
 	</PerspectiveCamera>
 {:else}
 	<PerspectiveCamera

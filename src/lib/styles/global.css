@@ -10,7 +10,7 @@ body {
 	overflow-y: auto;
 	overflow-y: overlay !important;
 	overflow-x: hidden;
-	background-color: lightblue;
+	background-color: lightgrey;
 }
 
 ::-webkit-scrollbar {

@@ -2,7 +2,7 @@
 	import { useLoading } from '$lib/state/loadingStore';
 	import { scale } from 'svelte/transition';
 
-	$: console.log($useLoading.loaded);
+	$: $useLoading.loaded;
 </script>
 
 {#if !$useLoading.loaded}

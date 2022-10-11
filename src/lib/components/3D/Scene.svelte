@@ -1,9 +1,20 @@
 <script lang="ts">
-	import { AmbientLight, OrbitControls, PerspectiveCamera, useThrelte } from '@threlte/core';
+	import { useThrelte } from '@threlte/core';
 	import Street from './Street/Street.svelte';
 	import Camera from './Camera.svelte';
+	import { LinearEncoding } from 'three';
+
+	import PostProcessing from './PostProcessing/PostProcessing.svelte';
+	import Lights from './Lights.svelte';
+
+	const { renderer } = useThrelte();
+
+	if (renderer) {
+		renderer.outputEncoding = LinearEncoding;
+	}
 </script>
 
+<!-- <PostProcessing /> -->
 <Street />
 <Camera />
-<AmbientLight color={'white'} intensity={0.8} />
+<Lights />
