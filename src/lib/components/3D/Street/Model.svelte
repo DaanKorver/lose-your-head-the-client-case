@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { GLTF } from '@threlte/extras';
 	import type { GLTF as tGLTF } from 'three/examples/jsm/loaders/GLTFLoader';
-	import { useLoading } from '$lib/state/loadingStore';
 	import type { Material, MeshStandardMaterial } from 'three';
 
 	let gltf: tGLTF | undefined;
@@ -27,5 +26,4 @@
 	castShadow
 	bind:materials={materialsRef}
 	receiveShadow
-	on:load={() => useLoading.set({ loaded: true })}
 />
