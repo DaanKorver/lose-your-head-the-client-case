@@ -13,10 +13,6 @@ body {
 	background-color: lightgrey;
 }
 
-html {
-	overflow-y: hidden !important;
-}
-
 ::-webkit-scrollbar {
 	width: 0.5rem;
 }

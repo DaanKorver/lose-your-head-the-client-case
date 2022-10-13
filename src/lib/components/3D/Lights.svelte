@@ -2,14 +2,30 @@
 	import { AmbientLight, DirectionalLight, SpotLight } from '@threlte/core';
 	import {
 		type SpotLight as tSpotlight,
+		type AmbientLight as tAmbientLight,
 		type DirectionalLight as tDirectionalLight,
 		Vector3
 	} from 'three';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
+	import { useEnter } from '$lib/state/enterStore';
 
 	let lightRef: tSpotlight | undefined;
 	let dirLight: tDirectionalLight | undefined;
+	let ambientLight: tAmbientLight | undefined;
+
+	$: {
+		if ($useEnter.entered) {
+			console.log('yes');
+
+			if (ambientLight) {
+				gsap.to(ambientLight, {
+					intensity: 0.5,
+					duration: 2
+				});
+			}
+		}
+	}
 
 	onMount(() => {
 		if (!lightRef || !dirLight) return;
@@ -65,7 +81,7 @@
 	bind:light={lightRef}
 />
 
-<AmbientLight intensity={0.5} />
+<AmbientLight intensity={0} bind:light={ambientLight} />
 <DirectionalLight
 	scale={1}
 	shadow

@@ -19,6 +19,9 @@
 		touchMultiplier: 2
 	});
 
+	//@ts-ignore
+	window.lenis = lenis;
+
 	// Info
 	// lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }: LenisScroll) => {
 	// 	({ scroll, limit, velocity, direction, progress });

@@ -3,8 +3,8 @@
 	import AxesHelper from '../helpers/AxesHelper.svelte';
 	import { isDebug } from '$lib/utils/isDebug';
 	import { gsap } from 'gsap';
-	import { onMount } from 'svelte';
 	import { useEnter } from '$lib/state/enterStore';
+	import { usePopup } from '$lib/state/popupStore';
 
 	const { camera } = useThrelte();
 
@@ -17,7 +17,12 @@
 					scrub: true,
 					pin: document.querySelector('main'),
 					start: 'top top',
-					end: '+=500%'
+					end: '+=500%',
+					onUpdate: (progress) => {
+						progress.progress > 0.98
+							? usePopup.set({ popup: true })
+							: usePopup.set({ popup: false });
+					}
 				}
 			})
 			.fromTo(
@@ -106,8 +111,6 @@
 			scrollAnimation.scrollTrigger?.enable();
 		}
 	}
-
-	onMount(() => {});
 </script>
 
 {#if $isDebug}

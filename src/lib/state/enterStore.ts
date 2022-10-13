@@ -5,4 +5,7 @@ interface EnterStore {
 	animated: boolean;
 }
 
-export const useEnter: Writable<EnterStore> = writable({ entered: false, animated: false });
+export const useEnter: Writable<EnterStore> = writable({
+	entered: false,
+	animated: false
+});

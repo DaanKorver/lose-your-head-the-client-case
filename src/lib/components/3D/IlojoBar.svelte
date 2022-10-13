@@ -32,4 +32,8 @@
 		height: 100%;
 		z-index: -1;
 	}
+
+	div > :global(canvas) {
+		position: absolute;
+	}
 </style>
