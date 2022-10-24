@@ -1,38 +1,47 @@
-# create-svelte
+# Ilojo Bar 3D
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+![ilojo-bar-rho vercel app_](https://user-images.githubusercontent.com/30351629/197471817-b52c0a30-e5e5-4836-910e-da48c7b08fe9.png)
 
-## Creating a project
+## Inhoudsopgave
+  * [Beschrijving](#beschrijving)
+  * [Kenmerken](#kenmerken)
+  * [Installatie](#installatie)
+  * [Gebruik](#gebruik)
+  * [Bronnen](#bronnen)
+  * [Licentie](#licentie)
+  
+## Beschrijving
+Dit is de repository voor Ilojo Bar 3D. Deze webapp neemt je mee naar Lagos om een kijkje te nemen in de straat van de Ilojo Bar.
 
-If you're seeing this, you've probably already done this step. Congrats!
+[Bekijk hem live](https://ilojo-bar-rho.vercel.app/)
+  
+## Installatie & Gebruik
+```
+# Cloning the repository
+git clone git@github.com:DaanKorver/lose-your-head-the-client-case.git
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+# Moving to the folder
+cd lose-your-head-the-client-case
 
-# create a new project in my-app
-npm create svelte@latest my-app
+# Install NPM packages
+npm install
+
+# Run local server
+npm run start
 ```
 
-## Developing
+## Bronnen
+- [Sveltekit](https://kit.svelte.dev/)
+- [GSAP](https://greensock.com/)
+- [Blender](https://www.blender.org/)
+- [Sketchfab](https://sketchfab.com/)
+- [Low Poly Modeling tutorial](https://www.youtube.com/watch?v=1jHUY3qoBu8)
+- [Three.js](https://threejs.org/)
+- [Threlte](https://threlte.xyz/)
+- [Prototype van Jeany en Jorn](https://github.com/jornveltrop/ilojo-bar)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Licentie
 
-```bash
-npm run dev
+![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This work is licensed under [GNU GPLv3](./LICENSE).
